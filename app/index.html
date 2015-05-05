@@ -1,0 +1,74 @@
+<!doctype html>
+<html ng-app='myResumeApp'>
+  <head>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <link rel=stylesheet type="text/css" href="styles/main.css">
+  </head>
+  
+  <title>Jerry's Resume</title>
+  
+  <body>
+
+    <div ng-controller="ResumeController" class="header">
+      <div id="title" ng-bind="someText.message"></div>
+      <div id="items" ng-show="true">
+        <div id="item" ng-repeat="item in headerItems"><a ng-href="#/{{item.itemName | lowercase}}">{{item.itemName}}</a></div>
+      </div>
+    </div> <!-- div header -->
+    
+    <div class="pageTurn">
+      <div id="prev"><p><h1>&lt;</h1></p></div>
+      <div id="next"><p><h1>&gt;</h1></p></div>
+    </div> <!-- div pageTurn -->
+
+    <div ng-view></div>
+  
+
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>-->
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/controller.js"></script>
+    <script src="scriptsjquery.min.js"></script>
+  
+
+
+
+    <script type="text/javascript">
+    
+      
+      // canvas draw circle image  
+      // var canvas = document.getElementById("company_logo");
+      // var cx =  canvas.getContext("2d");
+      // cx.beginPath();
+      // cx.arc(100, 100, 50, 0, 2 * Math.PI, true);
+      // cx.clip();
+      // var image = new Image();
+      
+      // image.src="images/promise.png";
+      // cx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+      //bar chart
+      // var canvas = document.querySelector("canvas");
+      // var context =  canvas.getContext("2d");
+      // var drawBars = function(bars) {
+      //   context.clearRect(0, 0, canvas.width, canvas.height);
+      //   for (var i = 0; i < bars; i ++) {
+      //     var yOff = i * (canvas.height / bars);
+      //     var w = Math.random() * canvas.width;
+      //     var h = canvas.height / bars * 0.8;
+      //     context.fillRect(0, yOff, w, h);
+      //     context.strokeRect(0, yOff, w, h);
+      //   }
+      // };
+      // drawBars(10);
+
+  </script>
+      
+    
+  </body>
+</html>
